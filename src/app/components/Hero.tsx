@@ -39,7 +39,7 @@ const Hero = () => {
     return (
         <div className="w-full md:h-auto backdrop-contrast-125 bg-white/30">
             <Image
-                className='h-screen md:max-h-96 object-cover saturate-50 backdrop-blur-xl bg-white/90' src={HeroImage}
+                className='h-screen md:max-h-96 w-full object-cover saturate-50 backdrop-blur-xl bg-white/90' src={HeroImage}
                 alt="hero-image"
             />
             <div className='absolute top-0 flex md:w-10/12 w-full md:ml-24 flex-col'>

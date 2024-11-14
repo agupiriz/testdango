@@ -14,9 +14,9 @@ const ModalCart = () => {
                     {cartItems.map((cartItem: any) => (
                         <div key={cartItem.id} className="flex items-center w-full justify-between">
                             <div className="flex">
-                                <p className="py-4">{cartItem?.id}-</p>
-                                <p className="py-4 font-bold">${cartItem?.price}-</p>
-                                <p className="py-4">x{cartItem?.quantity}</p>
+                                <p className="py-4 px-2">{cartItem?.name}-</p>
+                                <p className="py-4 font-bold">${cartItem?.price}</p>
+                                <p className="py-4 px-2">x{cartItem?.quantity}</p>
                             </div>
                             <button
                                 className="bg-red-500 mx-2 rounded-lg px-4 text-xs h-8 text-center text-white"
