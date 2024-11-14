@@ -11,7 +11,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#7AA65A"
       },
+      lineHeight: {
+        'xxs': '13.31px',
+      },
+      fontSize: {
+        xxs: '11px',
+      }
     },
   },
   plugins: [],
