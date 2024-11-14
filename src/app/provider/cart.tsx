@@ -1,17 +1,23 @@
 'use client'
 import { createContext, useEffect, useState } from "react";
+import { ItemProps } from "../components/CardProduct";
 
 const CartContext = createContext({});
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const CartProvider = ({ children }) => {
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const [cartItems, setCartItems] = useState<any>([]);
     const [totalCart, setTotalCart] = useState<number>(0);
 
     useEffect(() => {
         let total = 0;
-        cartItems.forEach((producto: any) => {
-            const subtotal = producto.price * producto.quantity;
-            total += subtotal;
+        cartItems.forEach((product: ItemProps) => {
+            if (product.price && product.quantity) {
+                const subtotal: number = product.price * product.quantity;
+                total += subtotal;
+            }
         });
         setTotalCart(total)
     }, [cartItems])

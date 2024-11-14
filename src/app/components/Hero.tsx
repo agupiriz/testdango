@@ -34,6 +34,7 @@ const SliderData = [
 ]
 
 const Hero = () => {
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const swiperRef: any = useRef();
     return (
         <div className="w-full md:h-auto backdrop-contrast-125 bg-white/30">

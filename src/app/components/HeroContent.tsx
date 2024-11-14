@@ -1,15 +1,14 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import RightArrow from '@/assets/icons/rigth_arrow.png'
 import GreenRightArrow from '@/assets/icons/arrow_rigth_green.png'
-import HeroImage from '@/assets/images/hero-image1.png'
 
 
 type HeroContentProps = {
     title: string,
     subtitle: string,
     description: string,
-    image: any
+    image: StaticImageData
 };
 
 const HeroContent: FC<HeroContentProps> = ({

@@ -1,10 +1,10 @@
 'use client'
 import { ProductsMock } from "@/mock/data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useContext, useEffect, useRef } from "react";
-let mitad = Math.floor(ProductsMock.length / 2);
-let mockedFirst = ProductsMock.slice(0, mitad + 1);
-let mockedSecond = ProductsMock.slice(mitad + 1);
+import { useContext, useRef } from "react";
+const middle = Math.floor(ProductsMock.length / 2);
+const mockedFirst = ProductsMock.slice(0, middle + 1);
+const mockedSecond = ProductsMock.slice(middle + 1);
 
 import 'swiper/css';
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
@@ -13,8 +13,9 @@ import SliderButtons from "./SliderButtons";
 import { CartContext } from "../provider/cart";
 
 const Products = () => {
-    const { cartItems, addItem, showModalCart } = useContext<any>(CartContext);
-
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
+    const { addItem } = useContext<any>(CartContext);
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const swiperRef: any = useRef();
     return (
         <div className="flex flex-col items-center justify-center my-8">

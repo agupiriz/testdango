@@ -1,9 +1,10 @@
+import { ItemProps } from '@/app/components/CardProduct'
 import Image1 from '@/assets/images/image-1.png'
 import Image2 from '@/assets/images/image-2.png'
 import Image3 from '@/assets/images/image-3.png'
 import Image4 from '@/assets/images/image-4.png'
 
-export const ProductsMock: any[] = [
+export const ProductsMock: ItemProps[] = [
     {
         id: 1,
         name: "Product 1",

@@ -3,6 +3,7 @@ import { CartContext } from "../provider/cart";
 
 
 const ModalCart = () => {
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const { cartItems, removeItem, totalCart } = useContext<any>(CartContext);
 
     return (
@@ -11,7 +12,7 @@ const ModalCart = () => {
                 <div className="modal-box md:w-96">
                     <h3 className="font-bold text-lg">Carrito</h3>
                     {cartItems.map((cartItem: any) => (
-                        <div className="flex items-center w-full justify-between">
+                        <div key={cartItem.id} className="flex items-center w-full justify-between">
                             <div className="flex">
                                 <p className="py-4">{cartItem?.id}-</p>
                                 <p className="py-4 font-bold">${cartItem?.price}-</p>

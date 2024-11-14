@@ -1,16 +1,18 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 
-type ItemProps = {
+export type ItemProps = {
     id: number,
-    path?: string,
-    price?: string
+    name?: string,
+    path?: StaticImageData,
+    price?: number,
+    quantity?: number,
 }
 
 
 type CardProductProps = {
     item: ItemProps,
-    addItem: (item: ItemProps) => {}
+    addItem: (item: ItemProps) => void
 };
 
 const CardProduct: FC<CardProductProps> = ({
@@ -18,7 +20,9 @@ const CardProduct: FC<CardProductProps> = ({
     addItem
 }) => {
 
-    const onAddItem = (item: any) => {
+    const onAddItem = (item: ItemProps) => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         document.getElementById('modalCart').showModal()
         addItem(item)
     }

@@ -19,6 +19,7 @@ const menuItems = [
 const NavBar = () => {
     const pathname = usePathname()
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     const { cartItems } = useContext<any>(CartContext);
 
 
@@ -27,6 +28,8 @@ const NavBar = () => {
     };
 
     const onViewCart = () => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         document.getElementById('modalCart').showModal()
     };
 
