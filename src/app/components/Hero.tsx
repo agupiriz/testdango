@@ -62,7 +62,6 @@ const Hero = () => {
                                     subtitle={item.subtitle}
                                     description={item.description}
                                     image={item.image}
-                                    swiperRef={swiperRef}
                                 />
                             </SwiperSlide>
                         ))}

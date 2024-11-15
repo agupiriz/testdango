@@ -2,23 +2,20 @@ import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import RightArrow from '@/assets/icons/rigth_arrow.png'
 import GreenRightArrow from '@/assets/icons/arrow_rigth_green.png'
-import SliderButtons from "./SliderButtons";
 
 
 type HeroContentProps = {
     title: string,
     subtitle: string,
     description: string,
-    image: StaticImageData,
-    swiperRef: any,
+    image: StaticImageData
 };
 
 const HeroContent: FC<HeroContentProps> = ({
     title,
     subtitle,
     description,
-    image,
-    swiperRef
+    image
 }) => {
     return (
         <div className="flex flex-col md:flex-row w-full md:justify-between mt-8">
