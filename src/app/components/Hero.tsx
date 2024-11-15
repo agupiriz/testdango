@@ -1,5 +1,5 @@
 'use client'
-import HeroImage from '@/assets/images/hero_bg.png'
+import HeroImage from '@/assets/images/background_variant.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import Image from 'next/image';
@@ -37,12 +37,12 @@ const Hero = () => {
     /* eslint-disable  @typescript-eslint/no-explicit-any */
     const swiperRef: any = useRef();
     return (
-        <div className="w-full md:h-auto backdrop-contrast-125 bg-white/30">
+        <div className="w-full md:h-auto backdrop-contrast-125 bg-white/30 flex justify-center">
             <Image
-                className='h-screen md:max-h-96 w-full object-cover saturate-50 backdrop-blur-xl bg-white/90' src={HeroImage}
+                className='h-screen md:max-h-128 w-full object-cover saturate-50 backdrop-blur-xl bg-white/90' src={HeroImage}
                 alt="hero-image"
             />
-            <div className='absolute top-0 flex md:w-10/12 w-full md:ml-24 flex-col'>
+            <div className='absolute top-0 flex md:w-10/12 md:max-w-5xl w-full md:ml-24 flex-col'>
                 <div className='w-full'>
                     <Swiper
                         key="1"
@@ -62,9 +62,9 @@ const Hero = () => {
                                     subtitle={item.subtitle}
                                     description={item.description}
                                     image={item.image}
+                                    swiperRef={swiperRef}
                                 />
                             </SwiperSlide>
-
                         ))}
                     </Swiper>
                 </div>

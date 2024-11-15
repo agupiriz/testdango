@@ -36,10 +36,10 @@ const CardProduct: FC<CardProductProps> = ({
             <div className="flex justify-between w-full mt-2 items-center flex-col md:flex-row">
                 <p className="sm:text-lg md:text-sm text-black">${item?.price}</p>
                 <button
-                    className="uppercase sm:text-md md:text-xxs text-white bg-primary rounded-lg p-1 min-w-3"
+                    className="uppercase sm:text-md md:text-xxs text-white bg-primary rounded-xl px-3 py-1 min-w-3"
                     onClick={() => onAddItem(item)}
                 >
-                    buy now
+                    <p className="tracking-wide">buy now</p>
                 </button>
             </div>
         </div>

@@ -18,6 +18,12 @@ export default {
       },
       fontSize: {
         xxs: '11px',
+      },
+      maxHeight: {
+        '128': '28rem',
+      },
+      height: {
+        '106': '22rem',
       }
     },
   },
