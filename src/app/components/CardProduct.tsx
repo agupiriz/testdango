@@ -34,9 +34,9 @@ const CardProduct: FC<CardProductProps> = ({
         >
             <Image src={item?.path || ''} alt='product' className="w-full md:min-w-40" />
             <div className="flex justify-between w-full mt-2 items-center flex-col md:flex-row">
-                <p className="text-xs text-black">${item?.price}</p>
+                <p className="sm:text-lg md:text-sm text-black">${item?.price}</p>
                 <button
-                    className="uppercase text-xxs text-white bg-primary rounded-lg p-1 min-w-3"
+                    className="uppercase sm:text-md md:text-xxs text-white bg-primary rounded-lg p-1 min-w-3"
                     onClick={() => onAddItem(item)}
                 >
                     buy now
