@@ -30,13 +30,13 @@ const CardProduct: FC<CardProductProps> = ({
     return (
         <div
             key={item?.id}
-            className="shadow-md rounded-lg p-3 max-w-40 w-full"
+            className="shadow-md rounded-lg p-3 w-full"
         >
-            <Image src={item?.path || ''} alt='product' />
-            <div className="flex justify-between w-full mt-2">
+            <Image src={item?.path || ''} alt='product' className="w-full md:min-w-40" />
+            <div className="flex justify-between w-full mt-2 items-center flex-col md:flex-row">
                 <p className="text-xs text-black">${item?.price}</p>
                 <button
-                    className="uppercase text-xxs text-white bg-primary rounded-lg p-1"
+                    className="uppercase text-xxs text-white bg-primary rounded-lg p-1 min-w-3"
                     onClick={() => onAddItem(item)}
                 >
                     buy now

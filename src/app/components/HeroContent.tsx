@@ -43,7 +43,7 @@ const HeroContent: FC<HeroContentProps> = ({
                 </div>
             </div>
             <div className="flex justify-center">
-                <Image src={image} alt='hero-image' width={170} />
+                <Image src={image} alt='hero-image' className="max-w-64 md:max-w-64" />
             </div>
         </div>
     )

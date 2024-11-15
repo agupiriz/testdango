@@ -18,8 +18,8 @@ const Products = () => {
     /* eslint-disable  @typescript-eslint/no-explicit-any */
     const swiperRef: any = useRef();
     return (
-        <div className="flex flex-col items-center justify-center my-8">
-            <p className="text-primary text-xl font-semibold">Featured Collection</p>
+        <div className="flex flex-col items-center justify-center my-8 m-6">
+            <p className="text-primary text-xl font-semibold text-center">Featured Collection</p>
             <div className="flex w-full flex-col">
                 <div className="w-full">
                     <Swiper
@@ -32,8 +32,8 @@ const Products = () => {
                         }}
                     >
                         <SwiperSlide className="flex items-center justify-center content-center self-center w-full">
-                            <div className="flex justify-center">
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:w-1/2">
+                            <div className="md:flex w-full md:justify-center">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:w-auto sm:w-full md:m-0">
                                     {mockedFirst.map((item) => (
                                         <CardProduct
                                             key={item.id}
@@ -45,8 +45,8 @@ const Products = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="flex justify-center">
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:w-1/2">
+                            <div className="md:flex w-full md:justify-center">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:w-auto sm:w-full md:m-0">
                                     {mockedSecond.map((item) => (
                                         <CardProduct
                                             key={item.id}
